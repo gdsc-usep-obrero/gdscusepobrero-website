@@ -7,7 +7,7 @@ const googlesans = googleSans({
 });
 
 export const metadata: Metadata = {
-  title: "GDSC USeP Obrero",
+  title: "Google Developer Student Clubs USeP Obrero",
   description:
     "Official website of Google Developer Student Clubs USeP Obrero chapter.",
 };
