@@ -11,7 +11,7 @@ function Footer() {
     <div className="py-6 px-4 md:px-12">
       <div className="flex flex-col justify-center items-center gap-10 md:flex-row-reverse md:items-start md:justify-center md:gap-16">
         <div className="flex flex-col items-center">
-          <div className="text-2xl">
+          <div className="text-xl">
             <span className="text-red">Keep in </span>
             <span className="text-blue">touch</span>{" "}
             <span className="text-yellow">with</span>{" "}

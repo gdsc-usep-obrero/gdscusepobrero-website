@@ -1,11 +1,12 @@
+import Footer from "@/components/footer";
+import { StickyNavbar } from "@/components/navbar";
 import type { Metadata } from "next";
 import googleSans from "next/font/local";
 import "../css/globals.css";
-import { StickyNavbar } from "@/components/navbar";
-import Footer from "@/components/footer";
+import { ThemeProvider } from "@/components/client-wrapper";
 
 const googlesans = googleSans({
-  src: "../font/googlesans-regular.woff2",
+  src: "../../public/fonts/googlesans-regular.woff2",
 });
 
 export const metadata: Metadata = {
@@ -20,12 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={googlesans.className + " text-black"}>
-      <body>
-        <StickyNavbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <ThemeProvider>
+      <html
+        lang="en"
+        className={`${googlesans.className} text-black min-h-full`}
+      >
+        <body className="flex flex-col min-h-screen">
+          <StickyNavbar />
+          <div className="flex-grow my-8">{children}</div>
+          <Footer />
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }
