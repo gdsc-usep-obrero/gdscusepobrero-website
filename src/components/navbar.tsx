@@ -49,12 +49,18 @@ export function StickyNavbar({}) {
       >
         Events
       </Link>
-      {/* <Link href="/team">
-        <a className={`text-black ${isActive("/team") ? "text-maroon" : ""}`}>Team</a>
+      <Link
+        href="/team"
+        className={`text-black ${isActive("/team") ? "text-maroon" : ""}`}
+      >
+        Team
       </Link>
-      <Link href="/contact">
-        <a className={`text-black ${isActive("/contact") ? "text-maroon" : ""}`}>Contact us!</a>
-      </Link> */}
+      <Link
+        href="/contact"
+        className={`text-black ${isActive("/contact") ? "text-maroon" : ""}`}
+      >
+        Contact us!
+      </Link>
     </ul>
   );
 
