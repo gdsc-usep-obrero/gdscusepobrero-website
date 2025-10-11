@@ -2,11 +2,7 @@ import { NextResponse } from "next/server";
 import * as cheerio from "cheerio";
 import ScrapedEventType from "@/types/scrapedEventType";
 
-export async function GET(): Promise<{
-  status: number;
-  events?: ScrapedEventType[];
-  error?: string;
-}> {
+export async function GET(): Promise<Response> {
   try {
     const res = await fetch(
       "https://gdsc.community.dev/university-of-southeastern-philippines-davao-philippines/"
